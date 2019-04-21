@@ -14,11 +14,11 @@ except ConnectionFailure:
     quit()
 
 print(connect.serverStatus) #статистика по серверу
-listBd = connect.list_database_names() #список базы данных
+listBd = connect.list_database_names() #список баз данных
 print(listBd)
 for local in listBd:
     db = connect[local]
-    print(db.command("dbstats")) #cтатистика по базам банных
+    print(db.command("dbstats")) #cтатистика по базам данных
     listCollection = db.list_collection_names()
     print(listCollection)
     for table in listCollection:
